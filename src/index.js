@@ -2,7 +2,15 @@ import connectDB from "./db/index.js"
 import dotenv from "dotenv"
 import app from "./app.js"
 
-dotenv.config()
+dotenv.config({
+    path: ".env"
+})
+
+// Log configuration for debugging
+// console.log("Cloudinary Configuration:");
+// console.log("cloud_name:", process.env.CLOUDINARY_CLOUD_NAME);
+// console.log("api_key:", process.env.CLOUDINARY_API_KEY);
+// console.log("api_secret:", process.env.CLOUDINARY_API_SECRET ? "***" : "not set");
 
 connectDB()
 .then(() => {
